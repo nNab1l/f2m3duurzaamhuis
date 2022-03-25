@@ -6,6 +6,6 @@
 ### Ahmet Asut
 ### Calvin Heeres
 
-Klik hier <http://34248.hosts1.ma-cloud.nl/Time-Dashboard/> om onze Tijd en Datum te bekijken.
+Klik hier <http://34248.hosts1.ma-cloud.nl/Time-Dashboard/> om onze Tijd en Datum te bekijken. <br>
 Klik hier <http://33580.hosts1.ma-cloud.nl/web/leaf/> om het begin van ons Dashboard te bekijken.
 
