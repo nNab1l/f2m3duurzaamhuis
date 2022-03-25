@@ -8,17 +8,18 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
+    background: #10101E;
 }
 
 .datetime{
-    color: #10101E;
-    background: #fff;
+    color: #fff;
+    background: #10101E;
     font-family: "Segoe UI", sans-serif;
     width: 21.25rem;
     padding: 0.9375rem 0.625rem;
     border: 0.1875rem solid #6DCC42; 
     border-radius: 0.3125rem;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
     transition: 0.5s;
     transition-property: background, box-shadow;
 }
@@ -26,7 +27,6 @@ body{
 .datetime:hover{
     background: #6DCC42;
     box-shadow: 0 0 1.875rem #6DCC42;
-    cursor: pointer;
 }
 
 .date{
@@ -52,6 +52,7 @@ body{
 }
 
 .time span:last-child{
+    background: #6DCC42;
     font-size: 1.875rem;
     font-weight: 600;
     text-transform: uppercase;
