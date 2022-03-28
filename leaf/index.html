@@ -8,21 +8,28 @@
     <title>Leaf dashboard</title>
 </head>
 <body>
-<section id="dashboard">
+<section class="dashboard">
     <article class="widget">
         <img src="img/leaf1.png" alt="">
     </article>
-    <article id="mychart" class="graph">
-        <p>grafiek</p>
+    <article class="grafiek">
+
+    </article>
+    <article class="graph">
+        <input class="slider" type="range">
+        <input  class="slider" type="range">
+        <input  class="slider" type="range">
     </article>
     <article  class="stats">
         <li id='location'></li>
         <li id="weather"></li>
         <li id="temp"></li>
-        <li></li>
+        <li id="sunset"></li>
         <li></li>
     </article>
+    
 </section>
 </body>
 <script src="main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
 </html>
