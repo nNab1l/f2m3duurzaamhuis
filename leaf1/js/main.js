@@ -48,3 +48,44 @@ function startTime() {
 let today = new Date().toISOString().slice(0, 10)
 
 document.getElementById("date").innerHTML = today;
+
+
+var ctx = document.getElementById('myChart');
+var stars = [250, 500, 1000, 1500, 2000];
+var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
+  var myChart = new Chart(ctx, {
+       type: 'bar',
+       data:  {
+       labels: frameworks,     
+       datasets: [{ 
+           label: 'Waterverbruik in liters',
+           borderRadius: 20,  
+           data: stars,
+           backgroundColor: [ 
+            "rgba(75, 192, 192, 0.2)", 
+            "rgba(75, 192, 192, 0.2)",
+            "rgba(75, 192, 192, 0.2)", 
+            "rgba(75, 192, 192, 0.2)", 
+            "rgba(75, 192, 192, 0.2)" 
+            ],
+            
+            borderColor: [  
+                "rgba(75, 192, 192, 1)", 
+                "rgba(75, 192, 192, 1)", 
+                "rgba(75, 192, 192, 1)", 
+                "rgba(75, 192, 192, 1)",
+                "rgba(75, 192, 192, 1)", 
+            ],
+
+            barPercentage: 0.1,
+            borderWidth: 1
+          
+          
+        
+        }]
+    }
+ }
+ )
+ 
+ 
+ 

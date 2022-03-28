@@ -134,7 +134,7 @@ h2{
 h1:before {
     content: "";
     position: absolute;
-    width: 300px;
+    width: 40rem;
     height: 20px;
     bottom: 0;
     border-bottom: 2px solid rgb(148, 196, 148);
@@ -162,7 +162,6 @@ li{
     right: 5rem;
     width: 25rem;
     border: none;
-    
 }
 
 
