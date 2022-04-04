@@ -70,45 +70,37 @@ var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
  )
  
 
-var ctx = document.getElementById('myChart');
-var stars = [250, 500, 1000, 1500, 2000];
-var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
-  var myChart = new Chart(ctx, {
-       type: 'bar',
-       data:  {
-       labels: frameworks,     
-       datasets: [{ 
-           label: 'Waterverbruik in liters',
-           borderRadius: 0,  
-           data: stars,
-           backgroundColor: [ 
-            "#94c49456", 
-            "#94c49456",
-            "#94c49456", 
-            "#94c49456", 
-            "#94c49456" 
-            ],
-            
-            borderColor: [  
-                "#94c494", 
-                "#94c494", 
-                "#94c494", 
-                "#94c494",
-                "#94c494", 
-            ],
-
-            barPercentage: 0.1,
-            borderWidth: 02,
-            
-          
-          
-        
-        }]
-    }
-
-    
- }
- )
+ var KWH = [6.3, 12.1, 10.4, 9.1, 8.7, 11.2, 7.9, 9.4];
+ var week = ['week1', 'week2', 'week3', 'week4', 'week5', 'week6', 'week7', 'week8'];
+ var cntxt = document.getElementById('Ahmet_Chart');
+ 
+ var myChart = new Chart(cntxt, {
+     type: 'pie',
+     data: {
+         labels: week,
+         datasets: [
+             {
+                 label: 'Water verbruik per week in liter',
+                 data: KWH,
+                 backgroundColor: [
+                     "#99fcff",
+                     "#77fbff",
+                     "#55faff",
+                     "#33f9ff",
+                     "#11f8ff",
+                     "#00e7ee",
+                     "#00c6cc",
+                     "#00a5aa",
+                 ],
+                 borderColor: "black",
+                 borderWidth: 1,
+                 fill: false,
+                 lineTension: 0
+             }
+         ]
+     },
+ });
+ 
  
 
  Date.UTC()
