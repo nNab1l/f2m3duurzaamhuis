@@ -3,11 +3,13 @@ var request = new XMLHttpRequest();
 request.open('GET',link,true);
 request.onload = function(){
     var obj = JSON.parse(this.response);
+    let milliSecondsSindsEpoch = obj.sys.sunrise * 1000;
+    datum = new Date(milliSecondsSindsEpoch);
     console.log(obj);
     document.getElementById('location').innerHTML = obj.name;
     document.getElementById('weather').innerHTML = obj.weather[0].description;
     document.getElementById('temp').innerHTML = obj.main.temp;
-    document.getElementById('sunrise').innerHTML = weather.json;
+    document.getElementById('sunrise').innerHTML = datum.toLocaleTimeString('nl-NL', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' } )
 }
 
 if(request.status==200){
@@ -15,7 +17,7 @@ if(request.status==200){
 }
 request.send();
 let datum;
-const URL = 'weather.json';
+const URL = 'http://api.openweathermap.org/data/2.5/weather?q=Amsterdam&APPID=d09bd6a00bb40655fa75dc89a1f1b806&units=metric';
 fetch(URL)
   .then(response => response.json())
   .then(weather => {
