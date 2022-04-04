@@ -9,6 +9,11 @@ html
     font-size: 62.5%; /*1 rem = 10px*/
 }
 
+.graph{
+    margin: 0 auto;
+    width: 200px;
+}
+
 body{
     font-size: rem;
     background: #ffffff;
@@ -35,7 +40,7 @@ body{
 .box{
     width: 15rem;
     height: 8rem;
-    background: rgb(148, 196, 148);
+    background: rgb(123, 162, 123);
     position: relative;
     bottom: 300px;
     display: flex;
@@ -60,7 +65,7 @@ body{
     box-shadow: 0 1rem 2rem 0px rgba(0, 0, 0, 0.2);
     border-radius: 5rem;
     flex-shrink: 0;
-    border: 3px solid rgb(148, 196, 148);
+    border: 3px solid #94c494;
     border-radius: 2rem;
     width: 40rem;
     position: relative;
@@ -166,16 +171,13 @@ li{
 
 
 img{
-    border-radius: 5rem;
-    flex-shrink: 0;
-    border-radius: 2rem;
-    background: rgb(255, 255, 255);;
+   
     margin-bottom: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 230px;
-    height: 200px;
+    width: 280px;
+    height: 230px;
 }
 
 

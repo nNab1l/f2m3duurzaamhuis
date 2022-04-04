@@ -3,14 +3,11 @@ var request = new XMLHttpRequest();
 request.open('GET',link,true);
 request.onload = function(){
     var obj = JSON.parse(this.response);
-    let sunrise = new Date();
-  sunrise.setTime(1648445075);
-  console.log(sunrise)
     console.log(obj);
     document.getElementById('location').innerHTML = obj.name;
     document.getElementById('weather').innerHTML = obj.weather[0].description;
     document.getElementById('temp').innerHTML = obj.main.temp;
-    document.getElementById('sunrise').innerHTML = sunrise;
+    document.getElementById('sunrise').innerHTML = weather.json;
 
 
     
@@ -19,6 +16,16 @@ if(request.status==200){
     console.log("ERROR");
 }
 request.send();
+let datum;
+const URL = 'weather.json';
+fetch(URL)
+  .then(response => response.json())
+  .then(weather => {
+    console.log(weather);
+    let milliSecondsSindsEpoch = weather.sys.sunrise * 1000;
+    datum = new Date(milliSecondsSindsEpoch);
+    console.log(datum.toLocaleString());
+  });
 
 
 
@@ -59,7 +66,7 @@ var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
        labels: frameworks,     
        datasets: [{ 
            label: 'Waterverbruik in liters',
-           borderRadius: 20,  
+           borderRadius: 0,  
            data: stars,
            backgroundColor: [ 
             "rgba(75, 192, 192, 0.2)", 
@@ -77,15 +84,19 @@ var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
                 "rgba(75, 192, 192, 1)", 
             ],
 
-            barPercentage: 0.1,
-            borderWidth: 1
+            barPercentage: 0.2,
+            borderWidth: 1,
+            
           
           
         
         }]
     }
+
+    
  }
  )
+ 
  
  
  
