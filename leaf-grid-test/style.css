@@ -96,8 +96,8 @@ img{
 }
 
 .card--fifth{
-    grid-row: 9 / 13;
-    grid-column: 5 / 9;
+    grid-row: 5 / 13;
+    grid-column: 2 / 5.5;
     border: 3px solid rgb(148, 196, 148);
     display: flex;
     padding: 6rem;
@@ -125,7 +125,6 @@ p{
     border-bottom: 3px rgb(148, 196, 148) solid;
 
 }
-
 
 .card--third{
     grid-row: 9 / 13;

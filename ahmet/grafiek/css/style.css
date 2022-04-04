@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.graphbox .box {
+    position     : relative;
+    background   : white;
+    padding      : 1.25rem;
+    width        : 100%;
+    box-shadow   : 0 0.4375rem 1.5625rem rgba(0, 0, 0, 0.08);
+    border-radius: 1.25rem;
+}
+
+.box{
+    width: 40rem;
+    height: 60rem;
+}
