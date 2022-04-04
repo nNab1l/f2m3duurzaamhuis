@@ -4,12 +4,15 @@ request.open('GET',link,true);
 request.onload = function(){
     var obj = JSON.parse(this.response);
     let milliSecondsSindsEpoch = obj.sys.sunrise * 1000;
+    let milliSecondsSindsEpoch1 = obj.sys.sunset * 1000;
     datum = new Date(milliSecondsSindsEpoch);
+    datum = new Date(milliSecondsSindsEpoch1);
     console.log(obj);
     document.getElementById('location').innerHTML = obj.name;
     document.getElementById('weather').innerHTML = obj.weather[0].description;
-    document.getElementById('temp').innerHTML = obj.main.temp;
-    document.getElementById('sunrise').innerHTML = datum.toLocaleTimeString('nl-NL', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' } )
+    document.getElementById('temp').innerHTML = obj.main.temp + "°C";
+    document.getElementById('sunrise').innerHTML = (datum.toLocaleString());;
+    document.getElementById('sunset').innerHTML = (datum.toLocaleString());;
 }
 
 if(request.status==200){
@@ -24,6 +27,17 @@ fetch(URL)
     console.log(weather);
     let milliSecondsSindsEpoch = weather.sys.sunrise * 1000;
     datum = new Date(milliSecondsSindsEpoch);
+    console.log(datum.toLocaleString());
+  });
+
+let datum1;
+const URL1 = 'http://api.openweathermap.org/data/2.5/weather?q=Amsterdam&APPID=d09bd6a00bb40655fa75dc89a1f1b806&units=metric';
+fetch(URL)
+  .then(response => response.json())
+  .then(weather => {
+    console.log(weather);
+    let milliSecondsSindsEpoch1 = weather.sys.sunset * 1000;
+    datum1 = new Date(milliSecondsSindsEpoch1);
     console.log(datum.toLocaleString());
   });
 
@@ -70,11 +84,11 @@ var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
  )
  
 
-var ctx = document.getElementById('myChart');
+//var ctx = document.getElementById('myChart1');
 var stars = [250, 500, 1000, 1500, 2000];
 var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
   var myChart = new Chart(ctx, {
-       type: 'bar',
+       type: 'pie',
        data:  {
        labels: frameworks,     
        datasets: [{ 
@@ -109,6 +123,9 @@ var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
     
  }
  )
+
+
+ 
  
 
  Date.UTC()
