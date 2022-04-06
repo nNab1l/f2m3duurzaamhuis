@@ -125,7 +125,7 @@ var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
  )
 
 
- 
+
  
 
  Date.UTC()
@@ -150,4 +150,3 @@ var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
  let today = new Date().toISOString().slice(0, 10)
  
  document.getElementById("date").innerHTML = today;
- 
