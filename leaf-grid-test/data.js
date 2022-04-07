@@ -26,10 +26,10 @@
                  let datum =  new Date(measurement.datum);
                
                  // De meting gegevens wegschrijven naar de div                
-                 dataDiv.innerHTML = `<h3>Datum: ${datum.toLocaleString()}</h3><p>Sensor: ${measurement.sensor} 
-                    </p><p>Temperature: ${measurement.value1}
-                    </p><p> Humidity: ${measurement.value2}
-                    </p><p> Lightintensity: ${measurement.value3}</p>`;
+                 dataDiv.innerHTML = `<h3></h3><p>Sensor: ${measurement.sensor} 
+                    </p><p>Temperatuur: ${measurement.value1}
+                    </p><p> Vochtigheid: ${measurement.value2}
+                    </p><p> Lightintensiteit: ${measurement.value3}</p>`;
             }
             
         renderData(); // start immediately
