@@ -1,4 +1,4 @@
-link = "http://api.openweathermap.org/data/2.5/weather?q=Amsterdam&APPID=d09bd6a00bb40655fa75dc89a1f1b806&units=metric";
+link = "http://api.openweathermap.org/data/2.5/weather?q=Amsterdam&APPID=d09bd6a00bb40655fa75dc89a1f1b806&units=metric&lang=nl";
 var request = new XMLHttpRequest();
 request.open('GET',link,true);
 request.onload = function(){
@@ -44,14 +44,14 @@ fetch(URL)
 
 
 var ctx = document.getElementById('myChart');
-var stars = [250, 500, 1000, 1500, 2000];
-var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
+var stars = [1240.60, 1248.41, 1249.16, 1249.95, 1253.67];
+var frameworks = ['week 1', 'week 2', 'week 3', 'week 4', 'week 5'];
   var myChart = new Chart(ctx, {
        type: 'bar',
        data:  {
        labels: frameworks,     
        datasets: [{ 
-           label: 'Waterverbruik in liters',
+           label: 'Waterverbruik Maart in liters',
            borderRadius: 0,  
            data: stars,
            backgroundColor: [ 
@@ -70,7 +70,7 @@ var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
                 "#94c494", 
             ],
 
-            barPercentage: 0.1,
+            barPercentage: 0.3,
             borderWidth: 02,
             
           
@@ -84,15 +84,15 @@ var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
  )
  
 
-//var ctx = document.getElementById('myChart1');
+var ctx = document.getElementById('myChart1');
 var stars = [250, 500, 1000, 1500, 2000];
 var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
   var myChart = new Chart(ctx, {
-       type: 'pie',
+       type: 'doughnut',
        data:  {
        labels: frameworks,     
        datasets: [{ 
-           label: 'Waterverbruik in liters',
+           label: 'Water',
            borderRadius: 0,  
            data: stars,
            backgroundColor: [ 
@@ -102,6 +102,8 @@ var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
             "#94c49456", 
             "#94c49456" 
             ],
+
+            maintainAspectRatio: false,
             
             borderColor: [  
                 "#94c494", 
@@ -113,6 +115,7 @@ var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
 
             barPercentage: 0.1,
             borderWidth: 02,
+           
             
           
           

@@ -1,5 +1,5 @@
 "use strict"
-        const timeDelay = 10000; // time delay refresh data
+        const timeDelay = 400; // time delay refresh data
         let refreshTimer = window.setInterval(renderData, timeDelay); // timer data opvragen van server
         
         // jouw persoonlijke URL

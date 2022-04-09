@@ -15,9 +15,7 @@ body{
     color: #94c494;
 }
 
-h2{
-    padding-top: 6rem;
-}
+
 
 
 div{
@@ -48,6 +46,9 @@ div{
 img{
     width: 28rem;
     vertical-align: text-top;
+    position: relative;
+    right: 7rem;
+    bottom: 7rem;
 }
 
 .box{
@@ -56,19 +57,18 @@ img{
     height: 10rem;
     color: white;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     border-radius: 1rem;
     align-items: center;
     position: relative;
-    left: 4rem;
     font-size: 1rem;
     display: block;
     padding-top: 1.5rem;
 }
 
 .card--first{
-    grid-column: 1 / 3;
-    grid-row: 1 / 13;
+    grid-column: 1 / 4;
+    grid-row: 1 / 9;
     display: flex;
     border: 3px solid rgb(148, 196, 148);
     justify-content: center;
@@ -81,9 +81,11 @@ img{
 
 
 .card--second{
-    grid-column: 7 / 13;
+    grid-column: 8 / 13;
     grid-row: 1 / 9;
     border: 3px solid rgb(148, 196, 148);
+    display: flex;
+    align-items: center;
 }
 
 #myChart{
@@ -106,15 +108,38 @@ img{
     grid-column: 5 / 9;
     border: 3px solid rgb(148, 196, 148);
     display: flex;
-    padding: 6rem;
+    justify-content: center;
+
+}
+.card--sixth{
+    grid-row: 9 / 13;
+    grid-column: 1 / 5;
+    border: 3px solid rgb(148, 196, 148);
+    display: flex;
+    padding-top: 4.5rem;
+    display: block;
+
+}
+
+
+.card--seventh{
+    grid-row: 1 / 9;
+    grid-column: 4 / 8;
+    border: 3px solid rgb(148, 196, 148);
+    display: flex;
     justify-content: center;
 
 }
 
-.card--fifth > input{
-    background: #94c494;
-    color: #94c494;
+
+.chartbox{
+    height: 10%;
+    width: 85%;
 }
+
+
+
+
 
 
 
@@ -124,12 +149,10 @@ p{
     align-items: center;
 }
 
-#time{
+h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 3px rgb(148, 196, 148) solid;
-
 }
 
 .card--third{
@@ -171,30 +194,3 @@ p{
 
 
 
-/* in een mediaquary is 1 rem ALTIJD de user zijn font-size */
-@media screen and (max-width: 87.5rem) {
-    .card--second{
-        grid-row: 1 / 7;
-    }
-    .card--third{
-        grid-column: 1 / 5;
-    }
-
-    .card--fourth{
-        grid-row: 9 / 13;
-        grid-column: 9 / 13;
-    }
-}
-
-
-@media screen and (max-width: 62.5rem) {
-    .card--second{
-        grid-row: 1 / 7;
-    }
-
-    .card--fourth{
-        grid-row: 9 / 13;
-        grid-column: 9 / 13;
-    }
-
-}
