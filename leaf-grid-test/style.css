@@ -205,9 +205,7 @@ h2{
 
 
 @media screen and (max-width: 62.5rem) {
-    .card--first, .card--second{
-        
-    }
+    
 
     .card--third{
         grid-row: 1 / 13;
