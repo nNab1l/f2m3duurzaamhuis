@@ -26,7 +26,7 @@
                  let datum =  new Date(measurement.datum);
                
                  // De meting gegevens wegschrijven naar de div                
-                 dataDiv.innerHTML = `<h3></h3><p>Sensor: ${measurement.sensor} 
+                 dataDiv.innerHTML = `<h3></h3><p>Parameters: ${measurement.sensor} 
                     </p><p>Temperatuur: ${measurement.value1}
                     </p><p> Vochtigheid: ${measurement.value2}
                     </p><p> Lichtintensiteit: ${measurement.value3}</p>`;

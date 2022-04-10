@@ -51,7 +51,7 @@ var frameworks = ['week 1', 'week 2', 'week 3', 'week 4', 'week 5'];
        data:  {
        labels: frameworks,     
        datasets: [{ 
-           label: 'Waterverbruik Maart in liters',
+           label: 'Waterverbruik Maart per m³',
            borderRadius: 0,  
            data: stars,
            backgroundColor: [ 
@@ -132,15 +132,16 @@ var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
 
 
  var ctx = document.getElementById('myChart2');
-var stars = [250, 500, 1000, 1500, 2000];
-var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
+var stars = [1325.143, 1327.889, 1332.413, 1334.461, 1337.461];
+var frameworks = ['week 1', 'week 2', 'week 3', 'week 4', 'week 5'];
   var myChart = new Chart(ctx, {
        type: 'line',
        data:  {
        labels: frameworks,     
        datasets: [{ 
-           label: 'Water',
-           borderRadius: 0,  
+           label: 'gasverbruik maart in m³',
+           borderRadius: 0,
+             
            data: stars,
            backgroundColor: [ 
             "#94c49456", 
@@ -151,6 +152,16 @@ var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
             ],
 
             fill: true,
+            pointRadius: 2,
+
+
+            
+               
+                  
+               
+
+          
+            
 
             
 
@@ -166,6 +177,9 @@ var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
 
             barPercentage: 0.1,
             borderWidth: 02,
+
+
+            
            
             
           
@@ -200,5 +214,9 @@ var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
    }
  
  let today = new Date().toISOString().slice(0, 10)
+
+
+
+ 
  
  
