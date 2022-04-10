@@ -29,7 +29,7 @@
                  dataDiv.innerHTML = `<h3></h3><p>Sensor: ${measurement.sensor} 
                     </p><p>Temperatuur: ${measurement.value1}
                     </p><p> Vochtigheid: ${measurement.value2}
-                    </p><p> Lightintensiteit: ${measurement.value3}</p>`;
+                    </p><p> Lichtintensiteit: ${measurement.value3}</p>`;
             }
             
         renderData(); // start immediately

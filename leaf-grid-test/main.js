@@ -6,28 +6,28 @@ request.onload = function(){
     let milliSecondsSindsEpoch = obj.sys.sunrise * 1000;
     let milliSecondsSindsEpoch1 = obj.sys.sunset * 1000;
     datum = new Date(milliSecondsSindsEpoch);
-    datum = new Date(milliSecondsSindsEpoch1);
+    datum2 = new Date(milliSecondsSindsEpoch1);
     console.log(obj);
     document.getElementById('location').innerHTML = obj.name;
     document.getElementById('weather').innerHTML = obj.weather[0].description;
     document.getElementById('temp').innerHTML = obj.main.temp + "°C";
-    document.getElementById('sunrise').innerHTML = (datum.toLocaleString());;
-    document.getElementById('sunset').innerHTML = (datum.toLocaleString());;
+    document.getElementById('sunset').innerHTML = "zon onder  " + (datum2.toLocaleString());;
+    document.getElementById('sunrise').innerHTML = "zon op  " + (datum.toLocaleString());;
 }
 
 if(request.status==200){
     console.log("ERROR");
 }
 request.send();
-let datum;
+let datum2;
 const URL = 'http://api.openweathermap.org/data/2.5/weather?q=Amsterdam&APPID=d09bd6a00bb40655fa75dc89a1f1b806&units=metric';
 fetch(URL)
   .then(response => response.json())
   .then(weather => {
     console.log(weather);
     let milliSecondsSindsEpoch = weather.sys.sunrise * 1000;
-    datum = new Date(milliSecondsSindsEpoch);
-    console.log(datum.toLocaleString());
+    datum2 = new Date(milliSecondsSindsEpoch);
+    console.log(datum2.toLocaleString());
   });
 
 let datum1;
@@ -103,7 +103,9 @@ var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
             "#94c49456" 
             ],
 
-            maintainAspectRatio: false,
+            
+
+           
             
             borderColor: [  
                 "#94c494", 
@@ -129,6 +131,53 @@ var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
 
 
 
+ var ctx = document.getElementById('myChart2');
+var stars = [250, 500, 1000, 1500, 2000];
+var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
+  var myChart = new Chart(ctx, {
+       type: 'line',
+       data:  {
+       labels: frameworks,     
+       datasets: [{ 
+           label: 'Water',
+           borderRadius: 0,  
+           data: stars,
+           backgroundColor: [ 
+            "#94c49456", 
+            "#94c49456",
+            "#94c49456", 
+            "#94c49456", 
+            "#94c49456" 
+            ],
+
+            fill: true,
+
+            
+
+           
+            
+            borderColor: [  
+                "#94c494", 
+                "#94c494", 
+                "#94c494", 
+                "#94c494",
+                "#94c494", 
+            ],
+
+            barPercentage: 0.1,
+            borderWidth: 02,
+           
+            
+          
+          
+        
+        }]
+    }
+
+    
+ }
+ )
+
  
 
  Date.UTC()
@@ -152,4 +201,4 @@ var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
  
  let today = new Date().toISOString().slice(0, 10)
  
- document.getElementById("date").innerHTML = today;
+ 

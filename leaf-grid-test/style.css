@@ -51,19 +51,8 @@ img{
     bottom: 7rem;
 }
 
-.box{
-    background: #94c494;
-    width: 20rem;
-    height: 10rem;
-    color: white;
-    display: flex;
-    justify-content: flex-end;
-    border-radius: 1rem;
-    align-items: center;
-    position: relative;
-    font-size: 1rem;
-    display: block;
-    padding-top: 1.5rem;
+#dataDiv{
+    font-size: 15px;
 }
 
 .card--first{
@@ -100,7 +89,8 @@ img{
     grid-row: 9 / 13;
     grid-column: 9 / 13;
     border: 3px solid rgb(148, 196, 148);
-    padding-top: 4.5rem;
+    padding-top: 2rem;
+    line-height: 3rem;
 }
 
 .card--fifth{
