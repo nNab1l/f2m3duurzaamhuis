@@ -85,8 +85,8 @@ var frameworks = ['week 1', 'week 2', 'week 3', 'week 4', 'week 5'];
  
 
 var ctx = document.getElementById('myChart1');
-var stars = [250, 500, 1000, 1500, 2000];
-var frameworks = ['Januari', 'Februari', 'Maart', 'April', 'Mei'];
+var stars = [13518, 13522, 13532, 13537, 13542, 13548, 13552];
+var frameworks = ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag'];
   var myChart = new Chart(ctx, {
        type: 'doughnut',
        data:  {
